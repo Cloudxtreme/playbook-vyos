@@ -1,0 +1,9 @@
+- name: Upload the script for ethernet interface settings
+  template: src=interface.sh.j2 dest=/tmp/script.sh mode=0755
+- name: Run the script for ethernet interface settings
+  command: /tmp/script.sh
+- name: Upload the script for NTP server settings
+  template: src=ntp.sh.j2 dest=/tmp/script.sh mode=0755
+- name: Run the script for NTP Server settings
+  command: /tmp/script.sh
+

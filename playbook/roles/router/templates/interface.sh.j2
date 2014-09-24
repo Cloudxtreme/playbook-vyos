@@ -1,0 +1,15 @@
+#!/bin/vbash
+
+source /opt/vyatta/etc/functions/script-template
+
+# set system gateway-address ''
+set interfaces ethernet eth0 description 'OUTSIDE'
+set interfaces ethernet eth0 duplex 'auto'
+set interfaces ethernet eth0 smp_affinity 'auto'
+set interfaces ethernet eth0 speed 'auto'
+# set interfaces ethernet eth1 address '10.10.0.1/16'
+# set interfaces ethernet eth1 description 'INSIDE'
+# set interfaces ethernet eth1 hw-id 'xx:xx:xx:xx:xx:xx'
+
+commit
+save

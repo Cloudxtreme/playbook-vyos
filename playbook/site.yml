@@ -1,0 +1,6 @@
+---
+- hosts: vyos
+  sudo: true
+  remote_user: vagrant
+  roles:
+    - router
