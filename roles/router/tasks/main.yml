@@ -6,4 +6,11 @@
   template: src=ntp.sh.j2 dest=/tmp/script.sh mode=0755
 - name: Run the script for NTP Server settings
   command: /tmp/script.sh
+- name: Upload the script for DNS server settings
+  template: src=nameserver.sh.j2 dest=/tmp/script.sh mode=0755
+- name: Run the script for DNS server settings
+  command: /tmp/script.sh
+
+
+
 
